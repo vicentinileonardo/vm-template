@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "required": [
+    "vm_name",
+    "cpu",
+    "memory",
+    "provider",
+    "scheduling"
+  ],
+  "properties": {
+    "vm_name": {
+      "type": [
+        "string"
+      ],
+      "title": "Name of the VM"
+    },
+    "cpu": {
+      "type": [
+        "number"
+      ],
+      "title": "Number of CPU cores",
+      "default": "2"
+    },
+    "memory": {
+      "type": [
+        "number"
+      ],
+      "title": "Number of GB of RAM",
+      "default": "2"
+    },
+    "provider": {
+      "type": [
+        "string",
+        "boolean",
+        "number",
+        "object",
+        "array"
+      ],
+      "enum": [
+        "azure",
+        "aws",
+        "gcp"
+      ],
+      "title": "Public cloud provider",
+      "default": "azure"
+    },
+    "scheduling": {
+      "type": "object",
+      "title": "VM assigned scheduling",
+      "required": [
+        "time",
+        "location"
+      ],
+      "properties": {
+        "time": {
+          "type": "string",
+          "pattern": "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+          "title": "Designated time of scheduling (ISO 8601 formatted date string in UTC)"
+        },
+        "location": {
+          "type": [
+            "string"
+          ],
+          "title": "Designated location of scheduling"
+        }
+      }
+    }
+  }
+}

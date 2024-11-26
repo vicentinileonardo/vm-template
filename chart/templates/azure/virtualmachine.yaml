@@ -1,0 +1,19 @@
+{{ $provider := .Values.provider }}
+{{ if eq $provider "azure" }}
+{{ $now := now }}
+{{ $schedulingTime := .Values.scheduling.time | toDate "2006-01-02T15:04:05Z" }}
+{{ if $now.After $schedulingTime }}
+apiVersion: compute.azure.com/v1api20220301
+kind: VirtualMachine
+metadata:
+  name: {{ .Values.vm_name }}
+spec:
+  hardwareProfile: {{ .Values.azure.virtualMachine.hardwareProfile | toYaml | nindent 4 }}
+  location: {{ .Values.scheduling.location }}
+  networkProfile: {{ .Values.azure.virtualMachine.networkProfile | toYaml | nindent 4 }}
+  osProfile: {{ .Values.azure.virtualMachine.osProfile | toYaml | nindent 4 }}
+  owner:
+    armId: {{ .Values.azure.resourceGroup.armId }}
+  storageProfile: {{ .Values.azure.virtualMachine.storageProfile | toYaml | nindent 4 }}
+{{ end }}
+{{ end }}

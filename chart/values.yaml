@@ -1,0 +1,20 @@
+ # @param {string} vm_name Name of the VM
+vm_name: my-test-virtual-machine-greenops
+
+# @param {number} cpu  Number of CPU cores
+cpu: 2
+
+# @param {number} memory Number of GB of RAM
+memory: 2
+
+ # @param {enum{azure,aws,gcp}} provider Public cloud provider
+provider: azure
+
+# @param {object} scheduling VM assigned scheduling
+scheduling:
+  # @param {pattern{^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$}} time Designated time of scheduling (ISO 8601 formatted date string in UTC)
+  time: 2024-11-21T10:00:00Z
+  
+  # @param {string} location Designated location of scheduling
+  location: italynorth
+

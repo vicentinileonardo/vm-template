@@ -1,0 +1,48 @@
+azure:
+  provisioningTimeOffset: 300
+
+  resourceGroup:
+    armId: ""
+
+  virtualNetwork:
+    name: samplevnet
+    addressSpace:
+      addressPrefixes:
+        - 10.0.0.0/16
+
+  virtualNetworkSubnet:
+    name: samplesubnet
+    addressPrefixes: 10.0.0.0/24
+
+  networkInterface:
+    name: samplenic
+    ipConfigurations:
+      - name: ipconfig1
+        privateIPAllocationMethod: Dynamic
+        subnet:
+          reference:
+            group: network.azure.com
+            kind: VirtualNetworksSubnet
+            name: samplesubnet
+
+  virtualMachine:
+    hardwareProfile:
+      vmSize: Standard_DS1_v2
+    networkProfile:
+      networkInterfaces:
+      - reference:
+          group: network.azure.com
+          kind: NetworkInterface
+          name: samplenic
+    osProfile:
+      adminPassword:
+        key: password
+        name: greenops-vm-secret
+      adminUsername: adminuser
+      computerName: poppy
+    storageProfile:
+      imageReference:
+        publisher: Canonical
+        offer: 0001-com-ubuntu-server-jammy
+        sku: 22_04-lts
+        version: latest

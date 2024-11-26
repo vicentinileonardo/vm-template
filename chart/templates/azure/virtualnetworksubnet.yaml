@@ -1,0 +1,15 @@
+{{ $provider := .Values.provider }}
+{{ if eq $provider "azure" }}
+{{ $now := now }}
+{{ $schedulingTime := .Values.scheduling.time | toDate "2006-01-02T15:04:05Z" }}
+{{ if $now.After $schedulingTime }}
+apiVersion: network.azure.com/v1api20240301
+kind: VirtualNetworksSubnet
+metadata:
+  name: {{ .Values.azure.virtualNetworkSubnet.name }}
+spec:
+  owner:
+    name: {{ .Values.azure.virtualNetwork.name }}
+  addressPrefix: {{ .Values.azure.virtualNetworkSubnet.addressPrefixes }}
+{{ end }}
+{{ end }}

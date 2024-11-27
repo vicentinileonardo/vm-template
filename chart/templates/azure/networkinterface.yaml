@@ -1,16 +1,22 @@
+{{ if hasKey .Values "provider" }}
 {{ $provider := .Values.provider }}
 {{ if eq $provider "azure" }}
+{{ if hasKey .Values "schedulingTime" }}
+{{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
 {{ $now := now }}
-{{ $schedulingTime := .Values.scheduling.time | toDate "2006-01-02T15:04:05Z" }}
 {{ if $now.After $schedulingTime }}
+{{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
+{{- $rg := (.Files.Get "azure_rg_values.yaml") | fromYaml }}
 apiVersion: network.azure.com/v1api20240301
 kind: NetworkInterface
 metadata:
-  name: {{ .Values.azure.networkInterface.name }}
+  name: {{ $av.networkInterface.name }}
 spec:
-  location: {{ .Values.azure.scheduling.location }}
+  location: {{ .Values.schedulingLocation }}
   owner:
-    armId: {{ .Values.azure.resourceGroup.armId }}
-  ipConfigurations: {{ .Values.azure.networkInterface.ipConfigurations | toYaml | nindent 4 }}
+    armId: {{ $rg.resourceGroup.armId }}
+  ipConfigurations: {{ $av.networkInterface.ipConfigurations | toYaml | nindent 4 }}
+{{ end }}
+{{ end }}
 {{ end }}
 {{ end }}

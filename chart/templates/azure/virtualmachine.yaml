@@ -1,19 +1,25 @@
+{{ if hasKey .Values "provider" }}
 {{ $provider := .Values.provider }}
 {{ if eq $provider "azure" }}
+{{ if hasKey .Values "schedulingTime" }}
+{{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
 {{ $now := now }}
-{{ $schedulingTime := .Values.scheduling.time | toDate "2006-01-02T15:04:05Z" }}
 {{ if $now.After $schedulingTime }}
+{{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
+{{- $rg := (.Files.Get "azure_rg_values.yaml") | fromYaml }}
 apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine
 metadata:
   name: {{ .Values.vm_name }}
 spec:
-  hardwareProfile: {{ .Values.azure.virtualMachine.hardwareProfile | toYaml | nindent 4 }}
-  location: {{ .Values.scheduling.location }}
-  networkProfile: {{ .Values.azure.virtualMachine.networkProfile | toYaml | nindent 4 }}
-  osProfile: {{ .Values.azure.virtualMachine.osProfile | toYaml | nindent 4 }}
+  hardwareProfile: {{ $av.virtualMachine.hardwareProfile | toYaml | nindent 4 }}
+  location: {{ .Values.schedulingLocation }}
+  networkProfile: {{ $av.virtualMachine.networkProfile | toYaml | nindent 4 }}
+  osProfile: {{ $av.virtualMachine.osProfile | toYaml | nindent 4 }}
   owner:
-    armId: {{ .Values.azure.resourceGroup.armId }}
-  storageProfile: {{ .Values.azure.virtualMachine.storageProfile | toYaml | nindent 4 }}
+    armId: {{ $rg.resourceGroup.armId }}
+  storageProfile: {{ $av.virtualMachine.storageProfile | toYaml | nindent 4 }}
+{{ end }}
+{{ end }}
 {{ end }}
 {{ end }}

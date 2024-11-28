@@ -25,3 +25,5 @@ go.work.sum
 .env
 
 azure_rg_values.yaml
+
+.DS_Store

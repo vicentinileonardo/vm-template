@@ -1,5 +1,5 @@
  # @param {string} vm_name Name of the VM
-vm_name: my-test-virtual-machine-greenops
+vmName: my-test-virtual-machine-greenops
 
 # @param {number} cpu  Number of CPU cores
 cpu: 2

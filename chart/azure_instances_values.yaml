@@ -1,0 +1,16 @@
+# Azure VM Size Mapping
+# Safe default. A smart algorithm could be written to find the most appropriate VM size
+azureVmSizeDefault: Standard_DS1_v2
+azureVmSizes:
+  - cpu: 1
+    memory: 1
+    size: Standard_B1s
+  - cpu: 1
+    memory: 2
+    size: Standard_A1_v2
+  - cpu: 2
+    memory: 4
+    size: Standard_A2_v2
+  - cpu: 4
+    memory: 8
+    size: Standard_A4_v2

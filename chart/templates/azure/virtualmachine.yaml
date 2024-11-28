@@ -5,20 +5,42 @@
 {{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
-{{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
-{{- $rg := (.Files.Get "azure_rg_values.yaml") | fromYaml }}
+{{ $av := (.Files.Get "azure_values.yaml") | fromYaml }}
+{{ $aiv := (.Files.Get "azure_instances_values.yaml") | fromYaml }}
+{{ $rgv := (.Files.Get "azure_rg_values.yaml") | fromYaml }}
+
+# Function to find the most appropriate VM size
+{{ $bestMatch := $aiv.azureVmSizeDefault }}
+{{ $minDiff := 9999 }}
+{{ $cpuThreshold := 1 }}   
+{{ $memoryThreshold := 2 }} 
+{{ range $aiv.azureVmSizes }}
+    {{ $cpuDiff := sub (max $.Values.cpu .cpu) (min $.Values.cpu .cpu) }}
+    {{ $memoryDiff := sub (max $.Values.memory .memory) (min $.Values.memory .memory) }}
+    {{ if and (le $cpuDiff $cpuThreshold) (le $memoryDiff $memoryThreshold) }}
+        {{ $totalDiff := add $cpuDiff $memoryDiff }}
+        {{ if le $totalDiff $minDiff }}
+            {{ $minDiff = $totalDiff }}
+            {{ $bestMatch = .size }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ $vmSize := $bestMatch }}
+
 apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine
 metadata:
-  name: {{ .Values.vm_name }}
+  name: {{ .Values.vmName }}
 spec:
-  hardwareProfile: {{ $av.virtualMachine.hardwareProfile | toYaml | nindent 4 }}
+  hardwareProfile:
+    vmSize: {{ $vmSize }}
   location: {{ .Values.schedulingLocation }}
   networkProfile: {{ $av.virtualMachine.networkProfile | toYaml | nindent 4 }}
   osProfile: {{ $av.virtualMachine.osProfile | toYaml | nindent 4 }}
   owner:
-    armId: {{ $rg.resourceGroup.armId }}
+    armId: {{ $rgv.resourceGroup.armId }}
   storageProfile: {{ $av.virtualMachine.storageProfile | toYaml | nindent 4 }}
+
 {{ end }}
 {{ end }}
 {{ end }}

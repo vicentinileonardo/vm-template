@@ -1,6 +1,6 @@
 apiVersion: v2
 name: vm-template
-description: A Helm chart for VM seployment on multiple cloud providers
+description: A Helm chart for VM deployment on multiple cloud providers
 
 # A chart can be either an 'application' or a 'library' chart.
 #

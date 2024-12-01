@@ -6,15 +6,15 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 {{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
-{{- $rg := (.Files.Get "azure_rg_values.yaml") | fromYaml }}
 apiVersion: network.azure.com/v1api20240301
 kind: NetworkInterface
 metadata:
   name: {{ $av.networkInterface.name }}
+  namespace: {{ .Values.namespace }}
 spec:
   location: {{ .Values.schedulingLocation }}
   owner:
-    armId: {{ $rg.resourceGroup.armId }}
+    armId: {{ $av.resourceGroup.armId }}
   ipConfigurations: {{ $av.networkInterface.ipConfigurations | toYaml | nindent 4 }}
 {{ end }}
 {{ end }}

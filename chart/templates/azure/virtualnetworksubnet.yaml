@@ -10,6 +10,7 @@ apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetworksSubnet
 metadata:
   name: {{ $av.virtualNetworkSubnet.name }}
+  namespace: {{ .Values.namespace }}
 spec:
   owner:
     name: {{ $av.virtualNetwork.name }}

@@ -42,3 +42,9 @@ virtualMachine:
       offer: 0001-com-ubuntu-server-jammy
       sku: 22_04-lts
       version: latest
+
+# Temporary solution agreed, 
+# in a normal case, a resource group should be created and represented as a k8s resource
+# and therefore the armId is not needed
+resourceGroup:
+  armId: '/subscriptions/31a6f7f0-996a-490e-b431-25c3f54b08b5/resourceGroups/UNITN'

@@ -24,10 +24,6 @@ jobs:
       - name: Replace Version in Chart.yaml
         run: sed -i 's/CHART_VERSION/${{ steps.tagger.outputs.version-without-v }}/g' ./chart/Chart.yaml
 
-      - name: Print secrets
-        run: |
-          echo "HELM_CHARTS_BOT: ${{ secrets.HELM_CHARTS_BOT }}"
-
       - name: Publish Helm chart
         uses: stefanprodan/helm-gh-pages@master
         with:

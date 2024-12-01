@@ -28,7 +28,8 @@ jobs:
         uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.HELM_CHARTS_BOT }}
-          charts_dir: ./charts
+          charts_dir: chart
+          target_dir: charts
           owner: vicentinileonardo
           repository: helm-charts
           branch: gh-pages

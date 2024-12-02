@@ -1,8 +1,8 @@
-{{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
 apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetworksSubnet
 metadata:
   name: samplesubnet
+  namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   owner:
     name: samplevnet

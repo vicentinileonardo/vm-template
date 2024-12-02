@@ -2,6 +2,7 @@ apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine
 metadata:
   name: {{ .Values.name }}
+  namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   hardwareProfile:
     vmSize: Standard_DS1_v2

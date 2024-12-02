@@ -2,6 +2,7 @@ apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetwork
 metadata:
   name: samplevnet
+  namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   location: {{ .Values.schedulingLocation }}
   owner:

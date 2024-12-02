@@ -2,8 +2,6 @@
   "type": "object",
   "$schema": "http://json-schema.org/draft-07/schema",
   "required": [
-    "vmName",
-    "namespace",
     "cpu",
     "memory",
     "provider",
@@ -11,20 +9,6 @@
     "schedulingLocation"
   ],
   "properties": {
-    "vmName": {
-      "type": [
-        "string"
-      ],
-      "title": "Name of the VM",
-      "default": "my-test-virtual-machine-greenops"
-    },
-    "namespace": {
-      "type": [
-        "string"
-      ],
-      "title": "Namespace for VM resources",
-      "default": "greenops"
-    },
     "cpu": {
       "type": [
         "integer"

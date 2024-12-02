@@ -16,8 +16,7 @@
 apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine
 metadata:
-  name: {{ .Values.vmName }}
-  namespace: {{ .Values.namespace }}
+  name: {{ .Values.name }}
 spec:
   hardwareProfile:
     vmSize: {{ $vmSize }}

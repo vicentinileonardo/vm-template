@@ -10,7 +10,6 @@ apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetwork
 metadata:
   name: {{ $av.virtualNetwork.name }}
-  namespace: {{ .Values.namespace }}
 spec:
   location: {{ .Values.schedulingLocation }}
   owner:

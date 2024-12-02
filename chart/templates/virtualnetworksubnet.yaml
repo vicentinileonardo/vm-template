@@ -2,8 +2,8 @@
 apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetworksSubnet
 metadata:
-  name: {{ $av.virtualNetworkSubnet.name }}
+  name: samplesubnet
 spec:
   owner:
-    name: {{ $av.virtualNetwork.name }}
-  addressPrefix: {{ $av.virtualNetworkSubnet.addressPrefixes }}
+    name: samplevnet
+  addressPrefixes: 10.0.0.0/24

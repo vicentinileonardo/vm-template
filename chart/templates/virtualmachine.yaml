@@ -1,6 +1,3 @@
-{{ $av := (.Files.Get "azure_values.yaml") | fromYaml }}
-{{ $aiv := (.Files.Get "azure_instances_values.yaml") | fromYaml }}
-
 apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine
 metadata:
@@ -9,8 +6,23 @@ spec:
   hardwareProfile:
     vmSize: Standard_DS1_v2
   location: {{ .Values.schedulingLocation }}
-  networkProfile: {{ $av.virtualMachine.networkProfile | toYaml | nindent 4 }}
-  osProfile: {{ $av.virtualMachine.osProfile | toYaml | nindent 4 }}
+  networkProfile:
+    networkInterfaces:
+    - reference:
+        group: network.azure.com
+        kind: NetworkInterface
+        name: samplenic
+  osProfile:
+    adminPassword:
+      key: password
+      name: greenops-vm-secret
+    adminUsername: adminuser
+    computerName: poppy 
   owner:
-    armId: {{ $av.resourceGroup.armId }}
-  storageProfile: {{ $av.virtualMachine.storageProfile | toYaml | nindent 4 }}
+     armId: '/subscriptions/31a6f7f0-996a-490e-b431-25c3f54b08b5/resourceGroups/UNITN'
+  storageProfile:
+    imageReference:
+      publisher: Canonical
+      offer: 0001-com-ubuntu-server-jammy
+      sku: 22_04-lts
+      version: latest

@@ -1,10 +1,16 @@
-{{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
 apiVersion: network.azure.com/v1api20240301
 kind: NetworkInterface
 metadata:
-  name: {{ $av.networkInterface.name }}
+  name: samplenic
 spec:
   location: {{ .Values.schedulingLocation }}
   owner:
-    armId: {{ $av.resourceGroup.armId }}
-  ipConfigurations: {{ $av.networkInterface.ipConfigurations | toYaml | nindent 4 }}
+    armId: '/subscriptions/31a6f7f0-996a-490e-b431-25c3f54b08b5/resourceGroups/UNITN' 
+  ipConfigurations:
+    - name: ipconfig1
+      privateIPAllocationMethod: Dynamic
+      subnet:
+        reference:
+          group: network.azure.com
+          kind: VirtualNetworksSubnet
+          name: samplesubnet

@@ -1,11 +1,12 @@
-{{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
 apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetwork
 metadata:
-  name: {{ $av.virtualNetwork.name }}
+  name: samplevnet
 spec:
   location: {{ .Values.schedulingLocation }}
   owner:
-    armId: {{ $av.resourceGroup.armId }}
-  addressSpace: {{ $av.virtualNetwork.addressSpace | toYaml | nindent 4 }}
+    armId: '/subscriptions/31a6f7f0-996a-490e-b431-25c3f54b08b5/resourceGroups/UNITN'
+  addressSpace:
+    addressPrefixes:
+      - 10.0.0.0/16
 

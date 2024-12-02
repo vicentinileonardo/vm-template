@@ -1,12 +1,5 @@
-{{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
-{{ $now := now }}
-{{ if $now.After $schedulingTime }}
-
 {{ $av := (.Files.Get "azure_values.yaml") | fromYaml }}
 {{ $aiv := (.Files.Get "azure_instances_values.yaml") | fromYaml }}
-
-# Function to find the most appropriate VM size
-{{- $vmSize := include "findBestVmSize" (dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $aiv.azureVmSizes "defaultVmSize" $aiv.azureVmSizeDefault) -}}
 
 apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine
@@ -14,12 +7,10 @@ metadata:
   name: {{ .Values.name }}
 spec:
   hardwareProfile:
-    vmSize: {{ $vmSize }}
+    vmSize: Standard_DS1_v2
   location: {{ .Values.schedulingLocation }}
   networkProfile: {{ $av.virtualMachine.networkProfile | toYaml | nindent 4 }}
   osProfile: {{ $av.virtualMachine.osProfile | toYaml | nindent 4 }}
   owner:
     armId: {{ $av.resourceGroup.armId }}
   storageProfile: {{ $av.virtualMachine.storageProfile | toYaml | nindent 4 }}
-
-{{ end }}

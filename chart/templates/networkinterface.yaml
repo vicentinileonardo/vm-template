@@ -1,6 +1,3 @@
-{{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
-{{ $now := now }}
-{{ if $now.After $schedulingTime }}
 {{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
 apiVersion: network.azure.com/v1api20240301
 kind: NetworkInterface
@@ -11,4 +8,3 @@ spec:
   owner:
     armId: {{ $av.resourceGroup.armId }}
   ipConfigurations: {{ $av.networkInterface.ipConfigurations | toYaml | nindent 4 }}
-{{ end }}

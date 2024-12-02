@@ -41,11 +41,7 @@
     },
     "provider": {
       "type": [
-        "string",
-        "boolean",
-        "number",
-        "object",
-        "array"
+        "string"
       ],
       "enum": [
         "azure",

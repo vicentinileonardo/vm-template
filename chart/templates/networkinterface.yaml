@@ -12,5 +12,3 @@ spec:
     armId: {{ $av.resourceGroup.armId }}
   ipConfigurations: {{ $av.networkInterface.ipConfigurations | toYaml | nindent 4 }}
 {{ end }}
-{{ end }}
-{{ end }}

@@ -1,7 +1,10 @@
-# @param {number} cpu  Number of CPU cores
+ # @param {string} vmName Name of the VM
+vmName:
+
+# @param {integer} cpu  Number of CPU cores
 cpu: 1
 
-# @param {number} memory Number of GB of RAM
+# @param {integer} memory Number of GB of RAM
 memory: 2
 
 # @param {enum{azure,aws,gcp}} provider Public cloud provider

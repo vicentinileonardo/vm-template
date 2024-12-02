@@ -1,5 +1,7 @@
- # @param {string} vm_name Name of the VM
+ # @param {string} vmName Name of the VM
 vmName: my-test-virtual-machine-greenops
+
+ # @param {string} namespace Namespace for VM resources
 namespace: greenops
 
 # @param {number} cpu  Number of CPU cores
@@ -11,5 +13,8 @@ memory: 2
 # @param {enum{azure,aws,gcp}} provider Public cloud provider
 provider: azure
 
+ # @param {string} schedulingTime Scheduling Time for the VM
 schedulingTime: 2024-11-01T00:00:00Z
+
+ # @param {string} schedulingLocation Scheduling Location for the VM
 schedulingLocation: italynorth

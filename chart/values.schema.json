@@ -27,14 +27,14 @@
     },
     "cpu": {
       "type": [
-        "number"
+        "integer"
       ],
       "title": "Number of CPU cores",
       "default": "1"
     },
     "memory": {
       "type": [
-        "number"
+        "integer"
       ],
       "title": "Number of GB of RAM",
       "default": "2"

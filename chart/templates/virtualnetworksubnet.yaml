@@ -14,7 +14,7 @@ metadata:
 spec:
   owner:
     name: {{ $av.virtualNetwork.name }}
-  addressPrefix: {{ $av.virtualNetworkSubnet.addressPrefixes }}
+  addressPrefixes: {{ $av.virtualNetworkSubnet.addressPrefixes }}
 {{ end }}
 {{ end }}
 {{ end }}

@@ -1,5 +1,5 @@
  # @param {string} vmName Name of the VM
-vmName:
+vmName: test-vm
 
 # @param {integer} cpu  Number of CPU cores
 cpu: 1

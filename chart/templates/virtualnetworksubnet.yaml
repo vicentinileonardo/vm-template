@@ -13,7 +13,7 @@ metadata:
   namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   owner:
-    name: {{ $av.virtualNetwork.name }}
+    name: {{ .Values.vmName }}-{{ $av.virtualNetwork.suffix }}
   addressPrefixes: {{ $av.virtualNetworkSubnet.addressPrefixes }}
 {{ end }}
 {{ end }}

@@ -21,7 +21,12 @@ spec:
   hardwareProfile:
     vmSize: Standard_DS1_v2
   location: {{ .Values.schedulingLocation }}
-  networkProfile: {{ $av.virtualMachine.networkProfile | toYaml | nindent 4 }}
+  networkProfile:
+    networkInterfaces:
+    - reference:
+        group: network.azure.com
+        kind: NetworkInterface
+        name: {{ .Values.vmName }}-{{ $av.networkInterface.suffix }}
   osProfile: {{ $av.virtualMachine.osProfile | toYaml | nindent 4 }}
   owner:
     armId: {{ $av.resourceGroup.armId }}

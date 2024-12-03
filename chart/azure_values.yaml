@@ -15,14 +15,6 @@ networkInterface:
   suffix: samplenic
 
 virtualMachine:
-  hardwareProfile:
-    vmSize: Standard_DS1_v2
-  networkProfile:
-    networkInterfaces:
-    - reference:
-        group: network.azure.com
-        kind: NetworkInterface
-        name: samplenic
   osProfile:
     adminPassword:
       key: password

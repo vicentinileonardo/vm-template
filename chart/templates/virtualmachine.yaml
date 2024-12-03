@@ -10,7 +10,6 @@
 {{ $av := (.Files.Get "azure_values.yaml") | fromYaml }}
 {{ $aiv := (.Files.Get "azure_instances_values.yaml") | fromYaml }}
 
-# Function to find the most appropriate VM size
 {{- $vmSize := include "findBestVmSize" (dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $aiv.azureVmSizes "defaultVmSize" $aiv.azureVmSizeDefault) -}}
 
 apiVersion: compute.azure.com/v1api20220301
@@ -20,7 +19,7 @@ metadata:
   namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   hardwareProfile:
-    vmSize: {{ $vmSize }}
+    vmSize: Standard_DS1_v2
   location: {{ .Values.schedulingLocation }}
   networkProfile: {{ $av.virtualMachine.networkProfile | toYaml | nindent 4 }}
   osProfile: {{ $av.virtualMachine.osProfile | toYaml | nindent 4 }}

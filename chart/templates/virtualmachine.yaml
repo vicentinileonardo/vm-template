@@ -4,7 +4,7 @@
 
 {{ if hasKey .Values "schedulingTime" }}
 {{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
-{{ $now := now | date "2006-01-02T15:04:05Z" }}
+{{ $now := now }}
 {{ if $now.After $schedulingTime }}
 
 {{ $av := (.Files.Get "azure_values.yaml") | fromYaml }}

@@ -9,7 +9,7 @@
 apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetwork
 metadata:
-  name: {{ .Values.vmName }}-{{ $av.virtualNetwork.name }}
+  name: {{ .Values.vmName }}-{{ $av.virtualNetwork.suffix }}
   namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   location: {{ .Values.schedulingLocation }}

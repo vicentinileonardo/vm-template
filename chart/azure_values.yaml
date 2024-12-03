@@ -1,26 +1,18 @@
 provisioningTimeOffset: 300
 
 virtualNetwork:
-  name: samplevnet
+  suffix: samplevnet
   addressSpace:
     addressPrefixes:
       - 10.0.0.0/16
 
 virtualNetworkSubnet:
-  name: samplesubnet
+  suffix: samplesubnet
   addressPrefixes: 
     - 10.0.0.0/24
 
 networkInterface:
-  name: samplenic
-  ipConfigurations:
-    - name: ipconfig1
-      privateIPAllocationMethod: Dynamic
-      subnet:
-        reference:
-          group: network.azure.com
-          kind: VirtualNetworksSubnet
-          name: samplesubnet
+  suffix: samplenic
 
 virtualMachine:
   hardwareProfile:

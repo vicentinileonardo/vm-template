@@ -9,13 +9,21 @@
 apiVersion: network.azure.com/v1api20240301
 kind: NetworkInterface
 metadata:
-  name: {{ .Values.vmName }}-{{ $av.networkInterface.name }}
+  name: {{ .Values.vmName }}-{{ $av.networkInterface.suffix }}
   namespace: {{ .Values.namespace | default "greenops" }}
 spec:
   location: {{ .Values.schedulingLocation }}
   owner:
     armId: {{ $av.resourceGroup.armId }}
-  ipConfigurations: {{ $av.networkInterface.ipConfigurations | toYaml | nindent 4 }}
+  ipConfigurations:
+  - name: ipconfig1
+    privateIPAllocationMethod: Dynamic
+    subnet:
+      reference:
+        group: network.azure.com
+        kind: VirtualNetworksSubnet
+        name: {{ .Values.vmName }}-{{ $av.virtualNetworkSubnet.suffix }}
+
 {{ end }}
 {{ end }}
 {{ end }}

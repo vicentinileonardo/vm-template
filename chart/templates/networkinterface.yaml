@@ -6,6 +6,11 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 {{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
+
+{{ $vnetsubnetName := printf "%s-%s" .Values.vmName $av.virtualNetworkSubnet.suffix }}
+{{- $subnet := lookup "network.azure.com/v1api20240301" "VirtualNetworksSubnet" "greenops " $vnetsubnetName -}}
+{{- if $subnet }}
+
 apiVersion: network.azure.com/v1api20240301
 kind: NetworkInterface
 metadata:
@@ -24,6 +29,7 @@ spec:
         kind: VirtualNetworksSubnet
         name: {{ .Values.vmName }}-{{ $av.virtualNetworkSubnet.suffix }}
 
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}

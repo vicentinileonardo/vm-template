@@ -22,7 +22,7 @@ spec:
       reference:
         group: network.azure.com
         kind: VirtualNetworksSubnet
-        name: {{ .Values.vmName }}-{{ $av.virtualNetworkSubnet.suffix }}
+        name: {{ .Values.vmName }}-{{ $av.virtualNetworkSubnet.suffix }}-test
 
 {{ end }}
 {{ end }}

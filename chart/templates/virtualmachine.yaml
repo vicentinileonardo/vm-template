@@ -11,7 +11,7 @@
 {{ $aiv := (.Files.Get "azure_instances_values.yaml") | fromYaml }}
 
 {{ $req := dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $aiv.azureVmSizes "defaultVmSize" $aiv.azureVmSizeDefault }}
-{{- $vmSize := include "findBestVmSize" $req | toString -}}
+{{- $vmSize := include "findBestVmSize" $req -}}
 
 apiVersion: compute.azure.com/v1api20220301
 kind: VirtualMachine

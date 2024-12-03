@@ -1,3 +1,6 @@
+{{/*
+This helper template is used to find the best VM size based on the CPU and Memory requirements.
+*/}}
 {{- define "findBestVmSize" -}}
 {{- $cpu := .cpu -}}
 {{- $memory := .memory -}}

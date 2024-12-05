@@ -1,4 +1,4 @@
-provisioningTimeOffset: 300
+xprovisioningTimeOffset: 300
 
 virtualNetwork:
   suffix: samplevnet

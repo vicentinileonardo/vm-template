@@ -1,0 +1,10 @@
+apiVersion: core.krateo.io/v1alpha1
+kind: CompositionDefinition
+metadata:
+  name: vmtemplate
+  namespace: greenops
+spec:
+  chart:
+    repo: vm-template
+    url: https://leonardovicentini.com/helm-charts/charts
+    version: 1.1.0

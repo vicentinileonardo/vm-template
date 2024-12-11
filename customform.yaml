@@ -1,0 +1,84 @@
+apiVersion: v1
+data:
+  panel: "true"
+kind: ConfigMap
+metadata:
+  name: template-vmtemplate-card
+  namespace: greenops
+---
+apiVersion: templates.krateo.io/v1alpha1
+kind: Widget
+metadata:
+  name: template-vmtemplate-card
+  namespace: greenops
+spec:
+  actions:
+  - template:
+      apiVersion: templates.krateo.io/v1alpha1
+      name: template-vmtemplate-customform
+      namespace: greenops
+      resource: customforms
+      verb: GET
+  - template:
+      apiVersion: core.krateo.io/v1alpha1
+      name: vmtemplate
+      namespace: greenops
+      resource: compositiondefinitions
+      verb: DELETE
+  app:
+    template:
+      color: blue
+      content: This is a card for vmtemplate template (custom form)
+      icon: fa-cubes
+      tags: greenops,1.1.0
+      title: VmTemplate
+      status: ""
+      date: "{{DATE}}"
+  propsRef:
+    name: template-vmtemplate-card
+    namespace: greenops
+  type: card
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: template-vmtemplate-customform
+  namespace: greenops
+data:
+  onSubmitId: submit
+  onSubmitVerb: POST
+  payloadFormKey: spec
+---
+apiVersion: templates.krateo.io/v1alpha1
+kind: CustomForm
+metadata:
+  name: template-vmtemplate-customform
+  namespace: greenops
+spec:
+  type: customform
+  propsRef:
+    name: template-vmtemplate-customform
+    namespace: greenops
+  actions:
+    - template:
+        id: submit
+        apiVersion: composition.krateo.io/v1-1-0
+        verb: POST
+        resource: vmtemplates
+        payloadToOverride:
+        - name: metadata.name
+          value: ${ "vmName" }
+        - name: metadata.namespace
+          value: ${ "greenops" }
+  app:
+    template:
+      schema: ${ .getCRD | .spec.versions[] | select(.name == "v1-1-0") | .schema.openAPIV3Schema.properties.spec.properties }
+      propertiesToHide: 
+      - schedulingTime
+      - schedulingLocation
+  api:
+  - name: getCRD
+    path: "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/vmtemplates.composition.krateo.io"
+    verb: GET
+    headers:
+    - 'Accept: application/json'

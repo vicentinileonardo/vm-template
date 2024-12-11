@@ -10,10 +10,10 @@ memory: 2
 # @param {enum{azure,aws,gcp}} provider Public cloud provider
 provider: azure
 
- # @param {string} schedulingTime Scheduling Time for the VM
+ # @param {string} [schedulingTime] Scheduling Time for the VM
 schedulingTime: 2025-05-05T00:00:00Z
 
- # @param {string} schedulingLocation Scheduling Location for the VM
+ # @param {string} [schedulingLocation] Scheduling Location for the VM
 schedulingLocation: italynorth
 
 # @param {string} duration Duration of the Workload

@@ -1,4 +1,4 @@
- # @param {string} vmName Name of the VM
+# @param {string} vmName Name of the VM
 vmName: test-vm
 
 # @param {integer} cpu  Number of CPU cores
@@ -6,12 +6,3 @@ cpu: 1
 
 # @param {integer} memory Number of GB of RAM
 memory: 2
-
-# @param {enum{azure,aws,gcp}} provider Public cloud provider
-provider: azure
-
- # @param {string} schedulingTime Scheduling Time for the VM
-schedulingTime: 2024-11-01T00:00:00Z
-
- # @param {string} schedulingLocation Scheduling Location for the VM
-schedulingLocation: italynorth

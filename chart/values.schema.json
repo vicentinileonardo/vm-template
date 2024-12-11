@@ -4,17 +4,15 @@
   "required": [
     "vmName",
     "cpu",
-    "memory",
-    "provider",
-    "schedulingTime",
-    "schedulingLocation"
+    "memory"
   ],
   "properties": {
     "vmName": {
       "type": [
         "string"
       ],
-      "title": "Name of the VM"
+      "title": "Name of the VM",
+      "default": "test-vm"
     },
     "cpu": {
       "type": [
@@ -39,22 +37,19 @@
         "aws",
         "gcp"
       ],
-      "title": "Public cloud provider",
-      "default": "azure"
+      "title": "Public cloud provider"
     },
     "schedulingTime": {
       "type": [
         "string"
       ],
-      "title": "Scheduling Time for the VM",
-      "default": "2024-11-01T00:00:00Z"
+      "title": "Scheduling Time for the VM"
     },
     "schedulingLocation": {
       "type": [
         "string"
       ],
-      "title": "Scheduling Location for the VM",
-      "default": "italynorth"
+      "title": "Scheduling Location for the VM"
     }
   }
 }

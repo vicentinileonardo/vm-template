@@ -67,7 +67,7 @@ spec:
         resource: vmtemplates
         payloadToOverride:
         - name: metadata.name
-          value: ${ "duration" }
+          value: ${ vmName }
         - name: metadata.namespace
           value: ${ "greenops" }
   app:

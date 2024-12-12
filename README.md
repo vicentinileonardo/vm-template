@@ -1,54 +1,23 @@
 # vm-template
 
-## Setup
+## How to install
 
-### Krateo 2.2
-
-```bash
-cat <<EOL > values.yaml
-chart:
-  # when helm is in a registry
-  url: https://leonardovicentini.com/helm-charts/charts
-  version: 1.0.0
-  repo: vm-template
-card:
-  icon: fa-cubes
-  title: VmTemplate
-  color: green
-  content: This is a card for VmTemplate
-EOL
-
-helm repo add krateo https://charts.krateo.io
-helm repo update krateo
-
-helm install vmtemplate krateo/compositiondefinition -n greenops --create-namespace -f values_2-2.yaml
-kubectl wait compositiondefinition vmtemplate --for condition=Ready=True --namespace greenops --timeout=300s
+```sh
+kubectl create ns greenops
+kubectl apply -f https://raw.githubusercontent.com/vicentinileonardo/vm-template/refs/heads/main/compositiondefinition.yaml
 ```
 
+### With *Krateo Composable Portal*
 
-### Krateo 2.3
+#### With custom form
 
-```bash
-cat <<EOL > values_2-3.yaml
-composition:
-  # when helm is in a registry
-  url: https://leonardovicentini.com/helm-charts/charts
-  version: 1.0.0
-  repo: vm-template
+```sh
+DATE=$(date +"%Y-%m-%dT%H:%M:%SZ")
+curl -sL "https://raw.githubusercontent.com/vicentinileonardo/vm-template/main/customform.yaml" | sed "s/{{DATE}}/$DATE/" | kubectl apply -f -
+```
 
-portal:
-  card:
-    icon: fa-cubes
-    title: VmTemplate
-    color: green
-    content: This is a card for VM template
-    tags: "1.0.0"
-    status: ""
-EOL
+#### Bonus: leverage patch-provider to reflect compositiondefinitionstatus in card
 
-helm repo add krateo https://charts.krateo.io
-helm repo update krateo
-
-helm install vmtemplate krateo/template --version 0.1.8 -n greenops --create-namespace -f values_2-3.yaml
-kubectl wait compositiondefinition vmtemplate --for condition=Ready=True --namespace greenops --timeout=300s
+```sh
+kubectl apply -f https://raw.githubusercontent.com/vicentinileonardo/vm-template/refs/heads/main/patch.yaml
 ```

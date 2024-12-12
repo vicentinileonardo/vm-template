@@ -6,8 +6,6 @@
     "cpu",
     "memory",
     "provider",
-    "schedulingTime",
-    "schedulingLocation",
     "duration",
     "deadline",
     "maxLatency"
@@ -17,21 +15,21 @@
       "type": [
         "string"
       ],
-      "title": "Name of the VM",
+      "description": "Name of the VM",
       "default": "test-vm"
     },
     "cpu": {
       "type": [
         "integer"
       ],
-      "title": "Number of CPU cores",
+      "description": "Number of CPU cores",
       "default": "1"
     },
     "memory": {
       "type": [
         "integer"
       ],
-      "title": "Number of GB of RAM",
+      "description": "Number of GB of RAM",
       "default": "2"
     },
     "provider": {
@@ -43,42 +41,42 @@
         "aws",
         "gcp"
       ],
-      "title": "Public cloud provider",
+      "description": "Public cloud provider",
       "default": "azure"
     },
     "schedulingTime": {
       "type": [
         "string"
       ],
-      "title": "Scheduling Time for the VM",
+      "description": "Scheduling Time for the VM",
       "default": "2025-05-05T00:00:00Z"
     },
     "schedulingLocation": {
       "type": [
         "string"
       ],
-      "title": "Scheduling Location for the VM",
+      "description": "Scheduling Location for the VM",
       "default": "italynorth"
     },
     "duration": {
       "type": [
         "string"
       ],
-      "title": "Duration of the Workload",
+      "description": "Duration of the Workload",
       "default": "3h"
     },
     "deadline": {
       "type": [
         "string"
       ],
-      "title": "Deadline of the Workload",
+      "description": "Deadline of the Workload",
       "default": "2025-12-31T10:00:00Z"
     },
     "maxLatency": {
       "type": [
         "integer"
       ],
-      "title": "Maximum Latency of the Workload",
+      "description": "Maximum Latency of the Workload",
       "default": "100"
     }
   }

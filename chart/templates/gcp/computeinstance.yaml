@@ -1,0 +1,57 @@
+{{ if hasKey .Values "provider" }}
+{{ $provider := .Values.provider }}
+{{ if eq $provider "gcp" }}
+
+{{ if hasKey .Values "schedulingTime" }}
+{{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
+{{ $now := now }}
+{{ if $now.After $schedulingTime }}
+
+{{ $giv := (.Files.Get "gcp_instances_values.yaml") | fromYaml }}
+
+{{ $req := dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $giv.gcpVmSizes "defaultVmSize" $giv.gcpVmSizeDefault }}
+{{- $vmSize := include "findBestVmSize" $req -}}
+
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeInstance
+metadata:
+  annotations:
+    cnrm.cloud.google.com/allow-stopping-for-update: "true"
+  name: {{ .Values.vmName }}
+  namespace: {{ .Values.namespace | default "greenops" }}
+  labels:
+    created-from: "image"
+    network-type: "subnetwork"
+spec:
+  machineType: {{ $vmSize }}
+  # check if the following is actually needed
+  zone: {{ .Values.schedulingLocation | default "europe-west8" }} # europe-west8 is the region for Milan
+  bootDisk:
+    initializeParams:
+      size: 24
+      type: pd-ssd
+      sourceImageRef:
+        external: debian-cloud/debian-11
+  networkInterface:
+    - subnetworkRef:
+        name: {{ .Values.vmName }}-subnetwork
+      aliasIpRange:
+        - ipCidrRange: /24
+          subnetworkRangeName: cloudrange
+  attachedDisk:
+    - sourceDiskRef:
+        name: {{ .Values.vmName }}-disk
+      mode: READ_WRITE
+      deviceName: persistentdisk
+  minCpuPlatform: "Intel Skylake"
+  serviceAccount:
+    serviceAccountRef:
+      name: {{ .Values.vmName }}-serviceaccount
+    scopes:
+    - compute-rw
+    - logging-write
+
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}

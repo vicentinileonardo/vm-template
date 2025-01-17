@@ -6,6 +6,7 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 {{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
+
 apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetwork
 metadata:
@@ -16,6 +17,7 @@ spec:
   owner:
     armId: {{ $av.resourceGroup.armId }}
   addressSpace: {{ $av.virtualNetwork.addressSpace | toYaml | nindent 4 }}
+  
 {{ end }}
 {{ end }}
 {{ end }}

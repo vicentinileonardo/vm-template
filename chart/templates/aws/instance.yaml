@@ -1,0 +1,27 @@
+
+{{- $os := .Values.os | default "ubuntu" -}}
+{{- $osVersion := .Values.osVersion | default "20.04 LTS" -}}
+
+
+{{- $imageID := include "getAMI" (list .Values.schedulingLocation $os $osVersion)  -}}
+
+
+apiVersion: ec2.services.k8s.aws/v1alpha1
+kind: Instance
+metadata:
+  name: {{ .Values.vmName }}
+  namespace: {{ .Values.namespace | default "greenops" }}
+  annotations:
+    services.k8s.aws/region: {{ .Values.schedulingLocation }}
+spec:
+
+  imageID: {{ $imageID }}
+  instanceType: {{ $vmSize }}
+  
+  # https://aws-controllers-k8s.github.io/community/docs/tutorials/ec2-example/#validate
+  # probably here we need helm lookup functions to get the subnet ID
+  subnetID: {{ (lookup "ec2.services.k8s.aws/v1alpha1" "Subnet" (.Values.namespace | default "greenops") (printf "%s-subnet" .Values.vmName)).status.subnetID }}
+  
+  tags:
+    - key: testKey
+      value: testValue

@@ -1,13 +1,15 @@
 apiVersion: ec2.services.k8s.aws/v1alpha1
 kind: VPC
 metadata:
-  name: $VPC_NAME
+  name: $
+  namespace: $INSTANCE_NAMESPACE
+  annotations:
+    services.k8s.aws/region: $REGION
 spec:
   cidrBlocks: 
-  - $CIDR_BLOCK
-  enableDNSSupport: $ENABLE_DNS_SUPPORT
-  enableDNSHostnames: $ENABLE_DNS_HOSTNAMES
-  disallowSecurityGroupDefaultRules: $DISALLOW_DEFAULT_SECURITY_GROUP_RULE
+  - "10.0.0.0/16"
+  enableDNSSupport: false
+  enableDNSHostnames: false
   tags:
-    - key: $TAG_KEY
-      value: $TAG_VALUE
+    - key: testKey
+      value: testValue

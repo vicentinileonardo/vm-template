@@ -6,6 +6,7 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 {{- $av := (.Files.Get "azure_values.yaml") | fromYaml }}
+
 apiVersion: network.azure.com/v1api20240301
 kind: VirtualNetworksSubnet
 metadata:
@@ -15,6 +16,7 @@ spec:
   owner:
     name: {{ .Values.vmName }}-{{ $av.virtualNetwork.suffix }}
   addressPrefixes: {{ $av.virtualNetworkSubnet.addressPrefixes }}
+
 {{ end }}
 {{ end }}
 {{ end }}

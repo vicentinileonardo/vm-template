@@ -1,0 +1,16 @@
+# AWS VM Size Mapping
+# Safe default. A smart algorithm could be written to find the most appropriate VM size
+awsVmSizeDefault: a1.medium
+awsVmSizes:
+  - cpu: 1
+    memory: 1
+    size: t2.micro
+  - cpu: 1
+    memory: 2
+    size: a1.medium
+  - cpu: 2
+    memory: 4
+    size: a1.large
+  - cpu: 4
+    memory: 8
+    size: a1.xlarge

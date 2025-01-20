@@ -7,10 +7,12 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 
-{{ $giv := (.Files.Get "gcp_instances_values.yaml") | fromYaml }}
-
+{{ $giv := (.Files.Get "gcp/gcp_instances_values.yaml") | fromYaml }}
 {{ $req := dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $giv.gcpVmSizes "defaultVmSize" $giv.gcpVmSizeDefault }}
 {{- $vmSize := include "findBestVmSize" $req -}}
+
+{{- $regionZoneMap := (.Files.Get "gcp/gcp_region_zone_map.yaml") | fromYaml -}}
+{{- $zone := include "getZone" (list $regionZoneMap .Values.schedulingLocation .Values.vmName) -}}
 
 apiVersion: compute.cnrm.cloud.google.com/v1beta1
 kind: ComputeInstance
@@ -24,8 +26,7 @@ metadata:
     network-type: "subnetwork"
 spec:
   machineType: {{ $vmSize }}
-  # check if the following is actually needed
-  zone: {{ .Values.schedulingLocation | default "europe-west8" }} # europe-west8 is the region for Milan
+  zone: {{ $zone }} # this must be a zone and not a region
   bootDisk:
     initializeParams:
       size: 24
@@ -43,13 +44,13 @@ spec:
         name: {{ .Values.vmName }}-disk
       mode: READ_WRITE
       deviceName: persistentdisk
-  minCpuPlatform: "Intel Skylake"
-  serviceAccount:
-    serviceAccountRef:
-      name: {{ .Values.vmName }}-serviceaccount
-    scopes:
-    - compute-rw
-    - logging-write
+  #minCpuPlatform: "Intel Skylake"
+  #serviceAccount:
+  #  serviceAccountRef:
+  #    name: {{ .Values.vmName }}-serviceaccount
+  #  scopes:
+  #  - compute-rw
+  #  - logging-write
 
 {{ end }}
 {{ end }}

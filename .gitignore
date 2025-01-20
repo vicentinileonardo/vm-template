@@ -27,3 +27,5 @@ go.work.sum
 azure_rg_values.yaml
 
 .DS_Store
+
+/raw_data

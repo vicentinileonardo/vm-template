@@ -15,7 +15,7 @@ spec:
   networkRef:
     name: {{ .Values.vmName }}-network
   ipCidrRange: 10.2.0.0/16
-  region: {{ .Values.schedulingLocation | default "europe-west8" }} # europe-west8 is the region for Milan
+  region: {{ .Values.schedulingLocation | default "europe-west8" }}
   secondaryIpRange:
     - rangeName: cloudrange
       ipCidrRange: 10.3.16.0/20

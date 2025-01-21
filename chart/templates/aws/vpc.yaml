@@ -1,22 +1,28 @@
 {{ if hasKey .Values "provider" }}
 {{ $provider := .Values.provider }}
 {{ if eq $provider "aws" }}
+{{ if hasKey .Values "schedulingTime" }}
+{{ $schedulingTime := .Values.schedulingTime | toDate "2006-01-02T15:04:05Z" }}
+{{ $now := now }}
+{{ if $now.After $schedulingTime }}
 
 apiVersion: ec2.services.k8s.aws/v1alpha1
 kind: VPC
 metadata:
-  name: $
-  namespace: $INSTANCE_NAMESPACE
+  name: {{ .Values.vmName }}-vpc
+  namespace: {{ .Values.namespace | default "greenops" }}
   annotations:
-    services.k8s.aws/region: $REGION
+    services.k8s.aws/region: {{ .Values.schedulingLocation }}
 spec:
   cidrBlocks: 
   - "10.0.0.0/16"
   enableDNSSupport: false
   enableDNSHostnames: false
   tags:
-    - key: testKey
-      value: testValue
+    - key: project
+      value: greenops
 
+{{ end }}
+{{ end }}
 {{ end }}
 {{ end }}

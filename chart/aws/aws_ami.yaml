@@ -1,54 +1,3725 @@
-# Source: https://cloud-images.ubuntu.com/locator/ec2/
 amis:
+  cn-north-1:
+  - ami: ami-059fae08c6592e113
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0421dcdbdf3e003dd
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-02339ab4552efd2d4
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0ee3100e2ca98748c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0ab1d63436cb4d9c3
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-089bc65f6c107bc9d
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-098c143c5cbefcde2
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0645b175d1736a2a3
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  cn-northwest-1:
+  - ami: ami-0ea3649e98fdb8a77
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0bf3246621defbfac
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-011fb91c6ad60313e
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-01375b196893d9af5
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0314d29e13eeb1774
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-01a4e75de4e2761e5
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0b01cd46bdb47a6c2
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0b2f3538da6b1ac14
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  mx-central-1:
+  - ami: ami-0cb619c928b81f40d
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0fc28145cdb52cb95
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-04916108b2d40a326
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0d7f9edcc57bacd1d
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0c5bd0d111eb0743f
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0ea7f4b102be9c9f9
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-00fe12217038f7318
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-09aed745a9e73a5d1
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-071237b99a62976a6
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-093c2295f6097200f
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-05b05ba1e8bceef76
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-08b269dbd51f62030
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-south-2:
+  - ami: ami-0bc75277569ad77f0
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-06f6fc2786de90a45
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0e386fa0b67b8b12c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-00b2b099cdd31358c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a94a70b8a1454a4b
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0060e85bb4a8eebc1
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-03dc0055c2ebdb18e
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0ac6c8a8c6e50cefa
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-00c53d8c6d0dae9f2
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0d3deefae16d66142
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-047248cf574e28ecc
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0f4bde172aeefba36
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-south-1:
+  - ami: ami-01c3c2810cfc414eb
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0bc2a5094cf98f026
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-00bb6a80f01f03502
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-09773b29dffbef1f2
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-023a307f3d27ea427
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-054ce975817cc2c02
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0d26d6f57d53eff44
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0a3317c83881c9f40
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-00f994c719fc62e9e
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-06b0cffae0bd46b27
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f2e255ec956ade7f
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0ae12517fe595ce17
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-09575e4553efe8448
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0166e89d589bb1b2f
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0d3611c6f2adcd778
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  eu-south-1:
+  - ami: ami-0da6f4139f5668703
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-08f55d3e58ce05adf
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0b385250c54450908
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0164dba2fd8949337
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0ded58aac79f90084
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0223ba8122f45fa36
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0e34c4f6ab8874874
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0bb7f543c4a857af1
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-00a33f689482e974e
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-020ea3935828b79b6
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-027f7881d2f6725e1
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0388cd84798fdb1a9
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  eu-south-2:
+  - ami: ami-05d09b63d8cfc94d8
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0a63a171e1d0cbdec
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-02e96c14cfbf743c6
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0c39b1f5db6eda649
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0895641da3c86443b
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0de3a73ea78d50ed0
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-012cd99a82176a6fa
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-016e76c4f28eb4a59
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0f3e2ff11564b8b74
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-066e2e598bd9ebb4a
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-06c8e9684e3742315
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-080da7032d033380d
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  me-central-1:
+  - ami: ami-05027ee515f38a3a3
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0d4b243750a89e143
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-002ef93757e855243
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-008ca673e3b55711a
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-07a33155d2d5abff0
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0060a22cee1afff63
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0be59895fbe6dffc1
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-01d4c730372003e6f
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0ca8b46c2794b82c4
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-05f8c3abb23e4db9d
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f58366b64c84be8b
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-05bb7793d98754a62
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  il-central-1:
+  - ami: ami-069e24432b97d3721
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-01b4a1534a657e248
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0d43c7c6c8fb4ee5c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-010fea0def6bda095
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-010cba0c0c7a0e510
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0831d8668f20bff34
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-02ec96d9ae8cfe05b
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-086b972470a369a02
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-07960758e7daf1083
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0c462025ec2676113
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-08734ec479a1ace4a
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0be1338b7ba847938
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ca-central-1:
+  - ami: ami-00d3e65a26ed1a238
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-079ea73e80a8b1176
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-055943271915205db
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-034c249991b82a6f5
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a474b3a85d51a5e5
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0534940467f2049a6
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-018273620a1789a34
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-069961b14969e74bb
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0de0dd4aba99b4a81
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-04562760c7bbb2b08
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-03bcd79f25ca6b127
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-03fc4d6b3ea7e9081
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0a7d5421816e931c8
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-02aa18cda4089e649
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-018e8527d2ef47ae6
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  eu-central-1:
+  - ami: ami-0c93aecac5b3f270b
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-021ad72fbafb7d114
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-07eef52105e8a2059
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-000b4fe7b39432646
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-03b3b5f65db7e5c6f
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-01a3827148555a032
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-05a3eb67a5a882338
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-072fdda659e3bcb79
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-03cea216f9d507835
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-02a799edff7fc72f5
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-09042b2f6d07d164a
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-074bcbbba36789937
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-048dc44b5f98dd463
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f431b2aa5fd30e18
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0e2821e7e40783fd1
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  eu-central-2:
+  - ami: ami-07f50f51fb8669b0e
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-00b87eb53a646ced7
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-035d4afc2b42ab68c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a25b2ec3836abaeb
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0039b5f24283949b4
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-09b1ce349a9e40fdd
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0674799eafba6740a
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0ff8a8f86aaa1f2c9
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-09eb6e3600939377f
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-04c7b724c4b97f082
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0c9b6c268ecacf10b
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-040a5e5aabe698b8c
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
   us-west-1:
-    - ami: ami-07d2649d67dbe8900
-      os: ubuntu
-      name: "Noble Numbat"
-      version: "24.04 LTS"
-      arch: "amd64"
-      instance_type: "hvm:ebs-ssd-gp3"
-      release: "20250115"
-      aki: "hvm"
-    - ami: ami-0d413c682033e11fd
-      os: ubuntu
-      name: "Jammy Jellyfish"
-      version: "22.04 LTS"
-      arch: "amd64"
-      instance_type: "hvm:ebs-ssd"
-      release: "20250112"
-      aki: "hvm"
-  us-east-1:
-    - ami: ami-04b4f1a9cf54c11d0
-      os: ubuntu
-      name: "Noble Numbat"
-      version: "24.04 LTS"
-      arch: "amd64"
-      instance_type: "hvm:ebs-ssd-gp3"
-      release: "20250115"
-      aki: "hvm"
-    - ami: ami-0e1bed4f06a3b463d
-      os: ubuntu
-      name: "Jammy Jellyfish"
-      version: "22.04 LTS"
-      arch: "amd64"
-      instance_type: "hvm:ebs-ssd"
-      release: "20250112"
-      aki: "hvm"
+  - ami: ami-0cadbb9e64e0ab8d8
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0f494752ecfb9b9d1
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-07d2649d67dbe8900
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0e429563766e13da0
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0d413c682033e11fd
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-09f9bd72d2cea4d9c
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0f00603d25980b321
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0058f6df9218f4bf9
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-09563a10670fc573c
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-005bbcc4543399324
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0454207e5367abf01
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-06d79d5316d395362
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-076763bd83bca6648
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-04a119c5b7ed4e7ad
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-007ef5e8a5e43d323
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  us-west-2:
+  - ami: ami-0ab1a5f48647ec783
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-020fd69ad4313e4c3
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-00c257e12d6828491
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0acefc55c3a331fa8
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0606dd43116f5ed57
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0db49c82192a20925
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0d06988dbb6bb46c9
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-03a6136c6041f7500
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0a588942e90cfecc9
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0bc5528b6cc822f33
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0688ba7eeeeefe3cd
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-08305dd8ab642ad8c
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-03cb30eb9df4f3c62
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-07b8a117da8f2c473
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-024437e14746c4dcb
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  af-south-1:
+  - ami: ami-03528c33086804af4
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-061b0f01e8f43f364
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0e6b72e746c973dd6
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-03944984249fe640a
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-05577c8d07333d909
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-048caf93acf90ef06
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-06404053ecf5e7a96
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0b22aee2a05b3b226
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-062f25c91d0d97e98
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-054ba20612843e233
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-063a9ea2ff5685f7f
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-07d1ddc0a19021abb
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  eu-north-1:
+  - ami: ami-0406dcff4b27fd490
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-094988860e25ad5f1
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-09a9858973b288bdd
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-001e33773aec8d45f
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-02e2af61198e99faf
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0cb5c52aa5ec9daf6
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0101bd1efcd56bb3c
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-023eca50e52e67649
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-09256263f8d0f1be1
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0af71aba5e0e29a9a
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-000e50175c5f86214
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-083ac04a8442d4b7f
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-08f93bffb82b8f743
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-01655e76e60342932
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  eu-west-3:
+  - ami: ami-0393d213bdd843a5c
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-03e9720fdf5f34005
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-06e02ae7bdac6b938
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0ae03246fb6acdee9
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-04a4acda26ca36de0
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-074b5832395c9057f
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-08b426ca1360eb488
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0e2d1158a7687ccde
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-05ad84af46e508c4d
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0ac5575b767da3e73
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-052f10f1c45aa2155
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0a5ee67e16e2e3530
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-08a4640a6420e4842
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0e2c84960ebe32aab
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  eu-west-2:
+  - ami: ami-03b08518e08976a71
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0aa20aaed7d0c402e
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-091f18e98bc129c4e
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0218d915e3ec83bc2
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-06cff85354b67982b
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-04e5b64bab1b89701
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0369be40d95ba7508
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-05ef6864c049b1ddf
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0fa5e6848bdd182d5
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-088a2350395501f7c
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-09a2a0f7d2db8baca
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-01c0540df77ccaa68
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0f330cf67319ffc68
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f98541a3c898423d
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0b5d515300a819fd9
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  eu-west-1:
+  - ami: ami-0cce1c436ea74fa1c
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-02a613454c927b102
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-03fd334507439f4d1
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0e2420433e60829b5
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-032a56ad5e480189c
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0fe825d0b661d4950
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-02c0f6c73d0c06045
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0373211bbd793bda4
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0e42de9d667b232f7
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f01b669e89e01292
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f29c8402f8cce65c
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0e8225827581c983a
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-07976c7eefa045c68
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0de3167fef21b4c0d
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0a5d9cd4e632d99c1
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-northeast-3:
+  - ami: ami-0be3731ea996347b0
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0a3a95c104b1e05a1
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-053e5b2b49d1b2a82
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-068f4a4d19bc7b838
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a0bcba223270ed99
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0c96360fd2a21c257
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-01107990e4f7e03fa
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0607f8b766dcaf8d2
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0efcc49ae1b1b93b2
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f7fc8522e0e052a6
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-00f5d213b513f1b07
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0ab5b86f9b84122c8
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-04b1af08acab6d268
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-09ea546ed9dfdc650
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  ap-northeast-2:
+  - ami: ami-053aadd9613106105
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-04ef68d06b4046e3f
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-024ea438ab0376a47
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0b5511d5304edfc79
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0077297a838d6761d
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-02b0575c5db06d053
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0ecad3fd8005cfcf8
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-07af39ba3795fb5c2
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0419dc605b6dde61f
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0195178fef736f4ed
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0dd97ebb907cf9366
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0b37e6563ef42a0eb
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-06826dcd8e966c94e
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-076062baca53e00b7
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-037929c83f82e109e
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  me-south-1:
+  - ami: ami-0907c62d58f30170f
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-03c6427384b6dd432
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0b92c37607e643c3d
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-019e68a234720b44e
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0b32599a51ef0ad90
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0d187ff71de67a77c
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-042f16d4d54fa68c0
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0be54ce3abc841d9b
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-00d0e78f1d77294d2
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0d0fa9c0c709a24e8
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0c41538a47f4b7d47
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0cebc6b71fba48617
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-northeast-1:
+  - ami: ami-0db705ea647e8534a
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0788af602c30216ac
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0a290015b99140cd1
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0329c152b4ffaa305
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-08f191dd81ec3a3de
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0df25da1b234a96a8
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-043ad5239904fa3fd
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0bc88a70cc7bc773a
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0e668b41786fecce6
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0d822614ffc46abe9
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0822295a729d2a28e
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-06602ea953ba135a9
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-01731434388fb80ed
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0bf3b3a183709b4af
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0ed13fc891b36929f
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  sa-east-1:
+  - ami: ami-015c8aa8aa9d3aa82
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-06e6955a4dc82e8f9
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-04d88e4b4e0a5db46
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a3a55315c8727d30
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0780816dd7ce942fd
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0287569bcbfccb83b
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0bbaebda91863ab5c
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0694532c714e00abf
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0cc56294a584ac234
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0155f8c8ce2d965e3
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0a729bdc1acf7528b
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-08bf1084c0b9a3361
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0853bb5dc57b4b0e2
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0a03639393082dea8
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0d0caabe07ca396ed
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-east-1:
+  - ami: ami-01d8cbfd83979c16c
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-004d106c07d41963d
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-01c19c4912400a3fd
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0e436430f8bcb436e
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a0aa69b665a45b96
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-04865a41a03262249
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0fdefa65f6812aaee
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-02d6260aa75779c2a
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0742c6c69f69d7099
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0b51a12bb26f0be88
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-038ff3475cbb62351
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-044f509770640155b
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ca-west-1:
+  - ami: ami-0dbfe916cdd2ff71b
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0b8afb90ef1a2dfea
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-01bd5c6ee91c13a95
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0f1b6cf87284a5c01
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0bd5d3965e2cc8c99
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0f811af35b06f3331
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-083546062aea74718
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-060da4cd69163f80f
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0efd64d71df080d59
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-00586e606dc174582
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0455d3863d576d2a4
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-068976a9e288220af
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
   ap-southeast-1:
-    - ami: ami-0672fd5b9210aa093
-      os: ubuntu
-      name: "Noble Numbat"
-      version: "24.04 LTS"
-      arch: "amd64"
-      instance_type: "hvm:ebs-ssd-gp3"
-      release: "20250115"
-      aki: "hvm"
-    - ami: ami-0198a868663199764
-      os: ubuntu
-      name: "Jammy Jellyfish"
-      version: "22.04 LTS"
-      arch: "amd64"
-      instance_type: "hvm:ebs-ssd"
-      release: "20250112"
-      aki: "hvm"
-# ... continuing for all regions ...
+  - ami: ami-06786f035d1aa27cf
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0eb8b4e070eabcb3e
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0672fd5b9210aa093
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0c2e5288624699cd8
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0198a868663199764
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-051557d87f0e75fff
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0370e4c760424b34d
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-08018204d814263dd
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0950bf7d28f290092
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0686f89a13d73d6c1
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f74c08b8b5effa56
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-03b6c12f592f54cf3
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0efb688453dda0e80
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-06fb6b98af3176846
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0025119d1d957b7aa
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-southeast-2:
+  - ami: ami-09aa46e9bab5fdde0
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0d79c5bd85c1c240e
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-09e143e99e8fa74f9
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0deabb23ed21cbcb3
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-01e2093820bf84df1
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0d1cb6e785e40b613
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-09e469061e3df2a3d
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0dedced63db8ceb81
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-00c0f390601db0712
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-04fbc68d62b77aef3
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0672b175139a0f8f4
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-09fe2be72ca884906
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-07faf95ad8ff215fe
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0980e10916e796a38
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-00f6e96b5de4d56c7
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-southeast-3:
+  - ami: ami-07794c9db4a675d74
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0476bb19fdfb3fd57
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0d22ac6a0e117cefe
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0aee3202f033c51bf
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-01d23da707abb0f2f
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0e410f787f6cb734a
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-004d964d3426e915d
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0759c6972bc182332
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-09770e967058c0c28
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-03cd6c947845224a8
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0e1af156739c38b84
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0e272509ee27b6fc8
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-southeast-4:
+  - ami: ami-09034decbf6bc3740
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-06515f081173f30fe
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0c3f9e8003ebc476c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-04cfa50674179c879
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-05e0c17592d882511
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0ad7b3c4ac46b3aae
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0ef6641a53e722853
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0fb2376398f903fd3
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0f6856c16d54228bb
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-00a566688ff53d223
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0dda149f4c9f2af1b
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0c3f0325a0ee1f114
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  us-east-1:
+  - ami: ami-075426e0accc68b53
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0a5b3d67a84b13bf9
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-04b4f1a9cf54c11d0
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a7a4e87939439934
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0e1bed4f06a3b463d
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0485c8c0dadf51233
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-014f7ab33242ea43c
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-02ccdccc3ba798e43
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-055744c75048d8296
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0fea31578248bcd6c
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0b0ea68c435eb488d
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-04b3c39a8a1c62b76
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-03025bb25a1de0fc2
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0059b7cd9f67d8050
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-06ae0e97bcb59038c
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-southeast-5:
+  - ami: ami-0c1ac4c690dc0a6c2
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-05b02792076812080
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-06f951286426b69e6
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0f5f873f3601e4062
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0a88b63550bbb2b1a
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-012ec3e24bb9162bc
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-011eb31e342f9c49e
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0a46786b60e8a883a
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-06a1569ae7b1ef09b
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0cbab7bcc566c00d8
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0ad67fda87ae4ff3b
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0af5988296bc96b6d
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  us-east-2:
+  - ami: ami-046ead6a3c6a7586a
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-050a40cb04a080ed0
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-0cb91c7de36eed2cb
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0ac5d9e789dbb455a
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0884d2865dbe9de4b
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0ea2a0c0dd4236d25
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-07b7898db169a1790
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-02c9d9fa97e027d01
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0bb220fc4bffd88dd
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0e3606a8091a015e5
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-05803413c51f242b7
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0b76100074ce446d4
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-02371361af091464a
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-097261bd06e355492
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0a561b65214a47cac
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  ap-southeast-7:
+  - ami: ami-02c40094f82bf5fc3
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-03eecf1a58a86ab27
+    os: ubuntu
+    name: Oracular Oriole
+    version: '24.10'
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250110'
+    aki: hvm
+  - ami: ami-019a40287c6e93276
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-0408f299f58202b2c
+    os: ubuntu
+    name: Noble Numbat
+    version: 24.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd-gp3
+    release: '20250115'
+    aki: hvm
+  - ami: ami-061d435ad1efdbc39
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-0c10c4088dfc4c77d
+    os: ubuntu
+    name: Jammy Jellyfish
+    version: 22.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250112'
+    aki: hvm
+  - ami: ami-04c61f9096bee4625
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-09dd7f1e493403175
+    os: ubuntu
+    name: Focal Fossa
+    version: 20.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20250111'
+    aki: hvm
+  - ami: ami-0541ffa0e73485466
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0577685b7cbef22f7
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0f37494c776f95733
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-092c660dc783d033d
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  us-gov-west-1:
+  - ami: ami-0a6242c1d41db7bde
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-02a1cd50466cce67f
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-029c925c0f16a0956
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-069715b885b575bcd
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-031e15f0c0a73c66e
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-08dabcc9275b03612
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm
+  - ami: ami-02abf8a9db9720053
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: pv:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  us-gov-east-1:
+  - ami: ami-02860be21b1307ce5
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-0cf4ad862d4c81771
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20230531'
+    aki: hvm
+  - ami: ami-077062c5cfb91a89e
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-03caf69e429b2e2e1
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: arm64
+    instance_type: hvm:ebs-ssd
+    release: '20210928'
+    aki: hvm
+  - ami: ami-0281e8cdc04cf75d9
+    os: ubuntu
+    name: Bionic Beaver
+    version: 18.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20230531'
+    aki: hvm
+  - ami: ami-001b108a58c567028
+    os: ubuntu
+    name: Xenial Xerus
+    version: 16.04 LTS
+    arch: amd64
+    instance_type: hvm:instance-store
+    release: '20210928'
+    aki: hvm

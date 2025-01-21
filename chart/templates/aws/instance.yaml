@@ -7,15 +7,14 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 
-{{ $av := (.Files.Get "azure_values.yaml") | fromYaml }}
-{{ $aiv := (.Files.Get "azure_instances_values.yaml") | fromYaml }}
-{{ $req := dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $aiv.azureVmSizes "defaultVmSize" $aiv.azureVmSizeDefault }}
+{{ $aiv := (.Files.Get "aws/aws_instances_values.yaml") | fromYaml }}
+{{ $req := dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $aiv.awsVmSizes "defaultVmSize" $aiv.awsVmSizeDefault }}
 {{- $vmSize := include "findBestVmSize" $req -}}
 
 {{- $os := .Values.os | default "ubuntu" -}}
 {{- $osVersion := .Values.osVersion | default "24.04 LTS" -}}
 {{- $amiData := (.Files.Get "aws/aws_ami.yaml") | fromYaml }}
-{{- $imageID := include "getAMI" (list .Values.schedulingLocation $os $osVersion $amiData)  -}}
+{{- $imageID := include "getAMI" (list .Values.schedulingLocation $os $osVersion $amiData) -}}
 
 # https://github.com/aws-controllers-k8s/ec2-controller/blob/main/test/e2e/resources/vpc.yaml
 apiVersion: ec2.services.k8s.aws/v1alpha1
@@ -26,19 +25,16 @@ metadata:
   annotations:
     services.k8s.aws/region: {{ .Values.schedulingLocation }}
 spec:
-
   imageID: {{ $imageID }}
-  instanceType: "test"
-  
+  instanceType: {{ $vmSize }}
   # https://aws-controllers-k8s.github.io/community/docs/tutorials/ec2-example/#validate
   # probably here we need helm lookup functions to get the subnet ID
   subnetID: "test"
-
   tags:
-    - key: testKey
-      value: testValue
+    - key: project
+      value: greenops
 
-{{- end }}
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}

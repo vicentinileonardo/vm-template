@@ -7,14 +7,18 @@
 {{ $now := now }}
 {{ if $now.After $schedulingTime }}
 
+{{ if (lookup "ec2.services.k8s.aws/v1alpha1" "Subnet" (.Values.namespace | default "greenops") (printf "%s-subnet" .Values.vmName)) }}
+
 {{ $aiv := (.Files.Get "aws/aws_instances_values.yaml") | fromYaml }}
 {{ $req := dict "cpu" .Values.cpu "memory" .Values.memory "vmSizes" $aiv.awsVmSizes "defaultVmSize" $aiv.awsVmSizeDefault }}
 {{- $vmSize := include "findBestVmSize" $req -}}
 
 {{- $os := .Values.os | default "ubuntu" -}}
 {{- $osVersion := .Values.osVersion | default "24.04 LTS" -}}
+{{- $arch := .Values.arch | default "amd64" -}}
+
 {{- $amiData := (.Files.Get "aws/aws_ami.yaml") | fromYaml }}
-{{- $imageID := include "getAMI" (list .Values.schedulingLocation $os $osVersion $amiData) -}}
+{{- $imageID := include "getAMI" (list .Values.schedulingLocation $os $osVersion $arch $amiData) -}}
 
 # https://github.com/aws-controllers-k8s/ec2-controller/blob/main/test/e2e/resources/vpc.yaml
 apiVersion: ec2.services.k8s.aws/v1alpha1
@@ -28,12 +32,12 @@ spec:
   imageID: {{ $imageID }}
   instanceType: {{ $vmSize }}
   # https://aws-controllers-k8s.github.io/community/docs/tutorials/ec2-example/#validate
-  # probably here we need helm lookup functions to get the subnet ID
-  subnetID: "test"
+  subnetID: {{ (lookup "ec2.services.k8s.aws/v1alpha1" "Subnet" (.Values.namespace | default "greenops") (printf "%s-subnet" .Values.vmName)).status.subnetID }}
   tags:
     - key: project
       value: greenops
 
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}

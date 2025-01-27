@@ -54,29 +54,30 @@ The consistency is needed since the function is called in more than one template
 
 {{/*
 [AWS]
-This helper template is used to find the AMI based on the region, OS and version.
+This helper template is used to find the AMI based on the region, OS, version, and architecture.
 */}}
 {{- define "getAMI" -}}
 {{- $region := index . 0 -}}
 {{- $os := index . 1 -}}
 {{- $version := index . 2 -}}
-{{- $amiData := index . 3 -}}
+{{- $arch := index . 3 -}}
+{{- $amiData := index . 4 -}}
 
-{{- if and $region $os $version -}}
+{{- if and $region $os $version $arch -}}
   {{- if hasKey $amiData "amis" -}}
     {{- $amis := index $amiData "amis" -}}
     {{- if hasKey $amis $region -}}
       {{- $regionData := index $amis $region -}}
       {{- $found := dict -}}
       {{- range $entry := $regionData -}}
-        {{- if and (eq $entry.os $os) (eq $entry.version $version) -}}
+        {{- if and (eq $entry.os $os) (eq $entry.version $version) (eq $entry.arch $arch) -}}
           {{- $found = $entry -}}
         {{- end -}}
       {{- end -}}
       {{- if not (empty $found) -}}
         {{- $found.ami -}}
       {{- else -}}
-        {{- fail (printf "No AMI found for OS %s version %s in region %s" $os $version $region) -}}
+        {{- fail (printf "No AMI found for OS %s version %s architecture %s in region %s" $os $version $arch $region) -}}
       {{- end -}}
     {{- else -}}
       {{- fail (printf "No AMI data found for region %s" $region) -}}
@@ -85,6 +86,6 @@ This helper template is used to find the AMI based on the region, OS and version
     {{- fail (printf "Invalid AMI data structure: missing 'amis' key") -}}
   {{- end -}}
 {{- else -}}
-  {{- fail (printf "Missing required parameters: region, os, or version") -}}
+  {{- fail (printf "Missing required parameters: region, os, version, or architecture") -}}
 {{- end -}}
 {{- end -}}
